@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/go:0-1.20-bullseye
+    # build:
+    #   context: .
+    #   dockerfile: ./hack/Dockerfile
+    # ports:
+    #   - 8080:8080
+    depends_on:
+      - db
+    environment:
+      MONGODB_URI: mongodb://db:27017
+      DB_HOST: db
+      DB_PORT: 27017
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      HTTP_LISTEN_ADDRESS: :8080
+
+  db:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 27017:27017

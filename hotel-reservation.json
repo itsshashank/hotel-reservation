@@ -1,0 +1,321 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "hotel-reservation",
+    "dateExported": "2023-06-15T06:57:51.276Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "e36a92e7-9145-468d-93b6-88d160bfb4e8",
+            "name": "hotels",
+            "containerId": "",
+            "created": "2023-06-14T04:12:47.650Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "a634bfc3-c22f-4f4e-92dc-681b2f572a9a",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-06-15T04:55:46.608Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "d1d9ae30-5b27-4f25-96c7-14b08c6255f4",
+            "name": "rooms",
+            "containerId": "",
+            "created": "2023-06-15T06:45:09.623Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "81c87c00-0f2b-42ce-9c07-f8f9e453120e",
+            "name": "bookings",
+            "containerId": "",
+            "created": "2023-06-15T06:50:02.541Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "b7922bce-0a0c-4b33-a649-0c32741c0328",
+            "name": "admin",
+            "containerId": "",
+            "created": "2023-06-15T06:52:20.877Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7af41ce2-6a9b-454e-b75f-4e4f69d3a556",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "b7922bce-0a0c-4b33-a649-0c32741c0328",
+            "name": "Get Users",
+            "url": "localhost:8080/admin/users",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-06-15T06:56:23.126Z",
+            "modified": "2023-06-15T06:56:50.551Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "53f79f93-c7b5-4974-9128-a0da4d76be92",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "b7922bce-0a0c-4b33-a649-0c32741c0328",
+            "name": "Get Users Copy",
+            "url": "localhost:8080/admin/users/<id>",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-06-15T06:56:54.801Z",
+            "modified": "2023-06-15T06:57:09.525Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1d76a4d4-e7c1-43c9-835c-ddba223ce2fa",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "",
+            "name": "auth",
+            "url": "localhost:8080/api/auth",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-06-14T03:59:10.715Z",
+            "modified": "2023-06-14T04:06:22.433Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"james@foo.com\",\n  \"password\": \"james_foo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "af94ffaf-0efa-4461-898a-5a1a73afafb2",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "a634bfc3-c22f-4f4e-92dc-681b2f572a9a",
+            "name": "Get",
+            "url": "localhost:8080/api/v1/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-14T05:27:41.916Z",
+            "modified": "2023-06-15T06:39:57.496Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1463d58a-5e37-409b-9e91-b2ba39339d26",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "d1d9ae30-5b27-4f25-96c7-14b08c6255f4",
+            "name": "Get all rooms",
+            "url": "localhost:8080/api/v1/rooms",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-15T06:45:19.806Z",
+            "modified": "2023-06-15T06:46:09.780Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0d7ec7f8-43ec-4dc6-9b77-b5159d90120d",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "81c87c00-0f2b-42ce-9c07-f8f9e453120e",
+            "name": "Get Booking",
+            "url": "localhost:8080/api/v1/bookings/200612",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-15T06:50:13.176Z",
+            "modified": "2023-06-15T06:51:03.272Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0f727d49-28e6-42bd-aa89-234dda2d012a",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "b7922bce-0a0c-4b33-a649-0c32741c0328",
+            "name": "Get Bookings",
+            "url": "localhost:8080/admin/bookings",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-15T06:52:27.604Z",
+            "modified": "2023-06-15T06:52:40.936Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c3152999-35c8-470e-b9ee-217f3d6ef3f7",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "e36a92e7-9145-468d-93b6-88d160bfb4e8",
+            "name": "List Hotels",
+            "url": "localhost:8080/api/v1/hotels",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-14T04:12:56.864Z",
+            "modified": "2023-06-15T06:40:44.555Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "72125bf8-7313-4a53-a7a2-b0e5ac2bb9f5",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "a634bfc3-c22f-4f4e-92dc-681b2f572a9a",
+            "name": "update",
+            "url": "localhost:8080/api/v1/users",
+            "method": "PATCH",
+            "sortNum": 20000,
+            "created": "2023-06-15T04:57:10.511Z",
+            "modified": "2023-06-15T06:40:12.975Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\": \"adam\",\n  \"lastName\":\"west\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d6cb71b7-6176-45e8-92db-7334a21894b8",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "d1d9ae30-5b27-4f25-96c7-14b08c6255f4",
+            "name": "Book room",
+            "url": "localhost:8080/api/v1/rooms/64895767fae516fb3c9be583/book",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-15T06:46:00.586Z",
+            "modified": "2023-06-15T06:48:43.894Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"fromDate\":\"2023-06-16\",\n\t\"tillDate\": \"2023-06-17\",\n\t\"numPersons\": 1\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cb3d1c13-d163-48f6-97e0-6e437ea01228",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "81c87c00-0f2b-42ce-9c07-f8f9e453120e",
+            "name": "Cancel Booking",
+            "url": "localhost:8080/api/v1/bookings/200612/cancel",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-15T06:51:17.434Z",
+            "modified": "2023-06-15T06:51:51.944Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ee3324bd-98ed-4a6f-80cc-99a4e64b5377",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "a634bfc3-c22f-4f4e-92dc-681b2f572a9a",
+            "name": "Delete",
+            "url": "localhost:8080/api/v1/users/64895767fae516fb3c9be583",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-06-15T06:38:48.228Z",
+            "modified": "2023-06-15T06:39:52.205Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "55431a0b-3333-4e0f-8adb-33fb520a15ed",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "e36a92e7-9145-468d-93b6-88d160bfb4e8",
+            "name": "Get Hotels",
+            "url": "localhost:8080/api/v1/hotels/64895767fae516fb3c9be583",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-15T06:41:06.884Z",
+            "modified": "2023-06-15T06:41:57.326Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ba8021c3-a8e4-461d-9933-4c8d0a31120a",
+            "colId": "557431ff-aeab-4fef-abc6-d8f573b86b63",
+            "containerId": "e36a92e7-9145-468d-93b6-88d160bfb4e8",
+            "name": "Get Rooms in Hotel",
+            "url": "localhost:8080/api/v1/hotels/64895767fae516fb3c9be583/rooms",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-06-15T06:41:22.697Z",
+            "modified": "2023-06-15T06:42:05.013Z",
+            "headers": [
+                {
+                    "name": "x-api-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
